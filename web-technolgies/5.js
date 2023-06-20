@@ -1,18 +1,11 @@
-var size = 5; // Set the desired size of the pattern
+function getInitials(sentence) {
+  var words = sentence.toLowerCase().split("");
+  var initials = words.map(function (word) {
+      return word.charAt(0);
+  });
+  return initials.join("");
 
-// Loop through each row
-for (var row = 1; row <= size; row++) {
-  var pattern = '';
-
-  // Loop through each column
-  for (var col = 1; col <= size; col++) {
-    // Check if the current position is on the border or within
-    if (row === 1 || row === size || col === 1 || col === size) {
-      pattern += '*'; // Print asterisk for border positions
-    } else {
-      pattern += ' '; // Print a space for inner positions
-    }
-  }
-
-  console.log(pattern); // Print the pattern for each row
 }
+
+var result = getInitials("Fly me to the moon");
+console.log(result);
