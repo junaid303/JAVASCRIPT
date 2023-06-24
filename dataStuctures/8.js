@@ -1,13 +1,7 @@
-var list = ["a", "b", "b", "c", "a"];
-
-function keepDuplicates(value, index) {
-  return index !== list.indexOf(value) || index !== list.lastIndexOf(value);
-}
-function capitalize(item) {
-  return item.toUpperCase();
-}
-var duplicates = list.filter(keepDuplicates);
-var capitalizedDuplicates = duplicates.map(capitalize);
-var result = capitalizedDuplicates[1];
-
-console.log(result);
+function reverse(sentence) {
+    return sentence.split(" ").reverse().join(" ");
+  }
+  var sentence = "Hello world!";
+  var result = reverse(sentence);
+  
+  console.log(result);
